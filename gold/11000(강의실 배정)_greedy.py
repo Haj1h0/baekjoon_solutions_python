@@ -42,3 +42,23 @@ def main():
       
 if __name__ == "__main__":
     print(main())
+
+
+# import sys, heapq
+# input = sys.stdin.readline
+
+# def main():
+#     n = int(input())
+#     lectures = [tuple(map(int, input().split())) for _ in range(n)]
+#     lectures.sort()  # start 오름차순, start 같으면 end 오름차순
+
+#     hq = []
+#     for s, e in lectures:
+#         if hq and hq[0] <= s:   # 가장 빨리 끝나는 강의실 재사용 가능
+#             heapq.heappop(hq)   # 방 1개만 비우고
+#         heapq.heappush(hq, e)   # 새 강의 배정
+
+#     return len(hq)              # 처리 후 힙 크기 = 필요한 최소 강의실 수
+
+# if __name__ == "__main__":
+#     print(main())
